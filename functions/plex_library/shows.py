@@ -65,6 +65,6 @@ def get_tvdb_id(show):
     """ Gets the tvdb ID from the show """
     tvdb_id = None
     last_episode = show.episodes()[-1]
-    if last_episode.guid != "" and 'thetvdb://' in last_episode.guid:
-        tvdb_id = last_episode.guid.split('thetvdb://')[1].split('?')[0].split('/')[0]
+    if last_episode.guid != "" and 'tvdb://' in last_episode.guid:
+        tvdb_id = last_episode.guid.split('tvdb://')[1].split('?')[0].split('/')[0]
     return tvdb_id
